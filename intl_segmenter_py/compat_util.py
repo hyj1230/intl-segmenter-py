@@ -80,6 +80,6 @@ class String:
         if isinstance(other, String):
             return self.data == other.data
         if isinstance(other, str):
-            return self.to_py_str() == other
+            return str(self) == other
         return False
 
