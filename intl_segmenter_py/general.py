@@ -1,5 +1,7 @@
 from .core import findUnicodeRangeIndex
-from ._general_data import letter_ranges, alphabetic_ranges, numeric_ranges, mark_ranges, punctuation_ranges, symbol_ranges, co_ranges, nd_ranges
+from ._general_data import letter_ranges, alphabetic_ranges, numeric_ranges, \
+                           mark_ranges, punctuation_ranges, symbol_ranges, \
+                           co_ranges, nd_ranges, nl_ranges
 
 
 # Check if the given code point is included in Unicode \\p{L} general property
@@ -44,3 +46,8 @@ def isCo(cp: int) -> bool:
 # Check if the given code point is included in Unicode \\p{Nd} general property
 def isNd(cp: int) -> bool:
     return findUnicodeRangeIndex(cp, nd_ranges) >= 0
+
+
+# Check if the given code point is included in Unicode \\p{Nl} general property
+def isNl(cp: int) -> bool:
+    return findUnicodeRangeIndex(cp, nl_ranges) >= 0
