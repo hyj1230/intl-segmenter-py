@@ -46,4 +46,8 @@ nd_ranges = decodeUnicodeData(
     ("1c,9,19c,9,1dc,9,1j4,9,1uu,9,1ye,9,21y,9,25i,9,292,9,2cm,9,2g6,9,2jq,9,2na,9,2qu,9,2ts,9,2xc,9,2zk,9,37k,9,39s,9,4ps,9,4r4,9,4zq,9,53k,9,58g,9,58w,9,5e8,9,5gw,9,5kw,9,5lc,9,wtc,9,xcg,9,xds,9,xjk,9,xkg,9,xn4,9,xyo,9,1eds,9,1fhc,9,1h68,9,1h6o,9,1ht2,9,1hww,9,1hyu,9,1i34,9,1ib4,9,1ikw,9,1iog,9,1iz4,9,1j28,9,1j2o,j,1j5c,9,1jhc,9,1jkg,9,1k34,9,1k5s,9,1kcw,9,1kf4,9,1kgw,9,1kr4,9,1xrk,9,1zkw,9,1znk,9,1zrk,9,206o,9,2j1s,9,2l72,1d,2n28,9,2ne8,9,2nsg,9,2nzl,9,2onk,9,2sc0,9")
 )
 
+# The Unicode `Nl` (Number, Decimal Digit) properties data
+nl_ranges = decodeUnicodeData(("4j2,2,6lc,y,6md,3,9hj,0,9i9,8,9iw,2,wyu,9,1etc,1g,1f7l,0,1f7u,0,1fbl,4,1log,32,20ok,2"))
+
+
 
