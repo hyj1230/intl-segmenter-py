@@ -32,7 +32,7 @@ for segment in segmenter.segment(text):
 - `segment(text: String)` – 返回可迭代对象，每个元素包含：
  - `'segment'`: `String` 类型（UTF-16 编码）
  - `'index'`: `int` – 分割起始位置（UTF-16 代码单元索引，与 JS 一致）
- - `'isWordLike'`: `bool` – 仅 word 模式有效，基于是否包含 `L`（字母）、`N`（数字）、`M`（标记）类字符
+ - `'isWordLike'`: `bool` – 仅 word 模式有效，基于是否包含 `L`（字母）、`Nd`、`Nl` 类字符
  - `'input'`: `String` 类型（UTF-16 编码）
 
 ### 已知不足
@@ -71,7 +71,7 @@ for segment in segmenter.segment(text):
 - `segment(text: String)` – returns iterable of segments, each with:
  - `'segment'`: `String` type (UTF-16 encoded)
  - `'index'`: `int` – start position in UTF-16 code units (matching JS behavior)
- - `'isWordLike'`: `bool` – word mode only, based on presence of `L` (letter), `N` (number), `M` (mark) characters
+ - `'isWordLike'`: `bool` – word mode only, based on presence of `L` (letter), `Nd`, `Nl` characters
  - `'input'`: `String` type (UTF-16 encoded)
 
 ### Known Limitations
