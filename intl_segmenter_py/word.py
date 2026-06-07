@@ -11,8 +11,7 @@
 # Converted from Rust to Python.
 
 from .emoji import isExtendedPictographic
-from .general import isNumeric, isLetter, isMark
-from .grapheme import cat
+from .general import isNd, isLetter, isNl
 from ._word_data import word_category
 
 
@@ -342,7 +341,9 @@ def word_bounds(s: str):
 # Filtering helpers
 # ----------------------------------------------------------------------
 def is_word_char(ch: int) -> bool:  # 暂定为判断L、N、M
-    return isLetter(ch) or isNumeric(ch) or isMark(ch)
+    if ch == 0xFF9F or ch == 0xFF9E:
+        return False
+    return isLetter(ch) or isNd(ch) or isNl(ch)
 
 def is_word_like(s: str) -> bool:
     return any(map(lambda c: is_word_char(ord(c)), s))
