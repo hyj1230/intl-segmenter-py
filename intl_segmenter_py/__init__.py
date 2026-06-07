@@ -1,4 +1,4 @@
-from .general import isAlphabetic, isAlphanumeric, isLetter, isNumeric, isMark, isPunctuation, isSymbol, isCo, isNd
+from .general import isAlphabetic, isAlphanumeric, isLetter, isNumeric, isMark, isPunctuation, isSymbol, isCo, isNd, isNl
 from .emoji import isEmoji, isEmojiPresentation, isExtendedPictographic
 from .script import isArabic
 from .grapheme import graphemeSegments, countGraphemes, splitGraphemes, isIndicConjunctConsonant, cat
