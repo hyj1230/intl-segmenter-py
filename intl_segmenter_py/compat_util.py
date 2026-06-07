@@ -82,4 +82,28 @@ class String:
         if isinstance(other, str):
             return str(self) == other
         return False
+    
+    def __bool__(self):
+        return bool(self.data)
+    
+    def __add__(self, other):
+        if isinstance(other, str):
+            other = String(other)
+        if isinstance(other, String):
+            return String(self.data + other.data)
+        else:
+            raise TypeError
+    
+    def contain_code(self, codes: tuple):
+        for i in range(0, len(self.data), 2):
+            ch = self.data[i] * 0x100 + self.data[i + 1]
+            if ch in codes: return True
+        return False
+   
+    def repeat(self, count: int):
+        return String(self.data * count)
+   
+    @staticmethod
+    def measure_length(s: int):
+        return len(s.encode(ENCODE_TYPE)) // 2
 
