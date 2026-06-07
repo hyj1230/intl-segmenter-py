@@ -38,7 +38,7 @@ for segment in segmenter.segment(text):
 ### 已知不足
 1. 不支持 `sentence` 模式
 2. 不支持 `locale` 定制，输出可能与 JS 行为不同
-3. word 模式中 `isWordLike` 仅根据 `L/N/M` 类字符判断，可能与 JS 差异较大
+3. word 模式中 `isWordLike` 仅根据 `L/Nd/Nl` 类字符判断，可能与 JS 差异较大
 
 ### 特别说明
 - 输出 `String` 类型模拟 JS UTF-16 字符串，可通过 `from intl_segmenter_py import String` 导入
@@ -77,7 +77,7 @@ for segment in segmenter.segment(text):
 ### Known Limitations
 1. `sentence` mode is not supported
 2. `locale` has no effect; output may differ from JS implementation
-3. In word mode, `isWordLike` only checks for `L/N/M` categories – behavior may differ from JS
+3. In word mode, `isWordLike` only checks for `L/Nd/Nl` categories – behavior may differ from JS
 
 ### Special Notes
 - Output uses `String` type to simulate JS UTF-16 strings; import via `from intl_segmenter_py import String`
